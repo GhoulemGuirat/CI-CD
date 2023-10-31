@@ -5,11 +5,6 @@ pipeline{
 
     stages {
 
-      stage('debut') {
-            steps {
-               echo "debut" 
-            }
-        }
         stage('Getting project from Git') {
             steps{
       		deleteDir()
@@ -22,11 +17,6 @@ pipeline{
 	                sh 'npm install'
 	                sh 'ng build --prod'
 	            }
-        }
-          stage('fin') {
-            steps {
-               echo "fin" 
-            }
         }
        }
 }
