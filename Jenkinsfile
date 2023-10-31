@@ -6,17 +6,17 @@ pipeline{
     stages {
 
 
-        stage('Getting project from Git') {
+        stage("Getting project from Git") {
             steps{
       		deleteDir()
         	checkout scm
             }
         }
 
-	stage('Build') {
+	stage("Build") {
 	            steps {
-	                sh 'npm install'
-	                sh 'ng build --prod'
+	                sh "npm install"
+	                sh "ng build --prod"
 	            }
         }
        }
